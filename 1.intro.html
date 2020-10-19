@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>LEARNING VUE.JS</h1>
+    <div id="app">
+        {{mensaje1}} <br>
+        {{mensaje2}}
+    </div>
+    <div id="app2">
+        {{mensaje3}}
+    </div>
+  </body>
+
+
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        mensaje1: "Primero mensaje, juan esta por aprender como funcionas!",
+        mensaje2: "Segundo mensaje"
+      },
+    });
+
+    var app2 = new Vue({
+      el: "#app2",
+      data: {
+        mensaje3: "Tercer mensaje"
+      },
+    });
+
+  </script>
+</html>

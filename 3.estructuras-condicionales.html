@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DIRECTIVAS CONDICIONALES</h1>
+    <div id="app-3">
+      <!-- 1er ejemplo v-if-->
+      <span v-if ="valor1">Ahora me ves...</span>
+      
+      <!-- 1er ejemplo v-if y v-else -->
+      <h1 v-if="valor2">Valor 2 es verdadero</h1>
+      <h1 v-else>Valor 2 es falso</h1>
+
+      <!-- 3er ejemplo v-else-if  -->
+      <div v-if="valor3 === 'A' ">
+        valor 3 es igual a: <strong>A</strong>
+      </div>
+      <div v-else-if="valor3 === 'B' ">
+        valor 3 es igual a: <strong>B</strong>
+      </div>
+      <div v-else-if="valor3 === 'C' ">
+        valor 3 es igual a: <strong>C</strong>
+      </div>
+      <div v-else>
+        No es ni <strong>A/B/C</strong>
+      </div>
+
+
+
+
+    </div>
+
+
+    <!-- bucle con javascript -->
+    <!-- <h2 id="Encabezado">Titulo con H2 de un curso</h2> -->
+
+
+
+  </body>
+
+  <script>
+    var app3 = new Vue({
+      el: '#app-3',
+      data:{
+        valor1: true,  //para ejemplo1
+        valor2: true,  //para ejemplo2
+        valor3: 'A'  //para ejemplo2
+      }
+    });
+
+    // TODO: BUCLE CON JAVASCRIPT
+    // var x = document.getElementById("Encabezado").innerHTML;
+    // console.log(x);
+    // console.log(x.length);
+    // if(x.length == 13){
+    //   console.log("Son 13 caracteres");
+    // }else{
+    //   console.log("No son 13 caracteres");
+    // }
+
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>EVENTOS</h1>
+    <!-- DEFINIMOS EL AMBITO DE VUE -->
+    <div id="app-5">
+      <!-- <button v-on:click="contador+=1">suma en 1</button> -->
+      <button @click="contador+=1">suma en 1</button>
+      <p>Hicimos click en el boton {{ contador }} veces</p>
+    </div>
+
+  </body>
+
+  <script>
+    var app5 = new Vue({
+      el: "#app-5",
+      data:{
+        contador:0
+      }
+    })
+  </script>
+</html>
