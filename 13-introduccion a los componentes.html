@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    {{ mensaje }}
+
+    <componente1></componente1>
+    <componente2></componente2>
+    <componente3></componente3>
+    <componente4></componente4>
+
+  </div>
+
+  
+   <!-- development version, includes helpful console warnings -->
+   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+   <script>
+    //  definimos un componente
+
+    Vue.component('componente1', {
+      template:'<h1>PLANTILLA DEL COMPONENTE 1</h1>'
+    });
+
+
+    Vue.component('componente2',{
+      template: '<h2>Plantilla del componente 2 </h2>'
+    });
+
+    Vue.component('componente3',{
+      template: '<h3>Plantilla del componente 3 </h3>'
+    });
+
+    Vue.component('componente4',{
+      template: '<h4>Plantilla del componente 4 </h4>'
+    });
+
+
+     new Vue({
+       el:"#app",
+       data:{
+         mensaje:'Componentes'
+       }
+     })
+   </script>
+</body>
+</html>

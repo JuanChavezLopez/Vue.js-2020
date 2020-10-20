@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+  <h1>Modificadores de eventos</h1>
+
+    <form id="myForm" action="/paginaProcesaPHP.php">
+      Nombre: <input type="text">
+      Apelido: <input type="text">
+      <input type="button" onclick="miFuncion()" value="Enviar">
+    </form>
+
+  <!-- <h4>Ejemplo con event preventDefault() en Javascript</h4> -->
+    <!-- ejemplo 1 -->
+  <!-- <a id="enlace" href="http://www.android.com">Ir a web de android</a>
+  <br>
+  Marque el checkbox: <input id="miChk" type="checkbox"> -->
+
+  <script>
+
+    // CAMBIA EL COMPORTAMIENTO DE LAS ETIQUETAS, SI EN ESTE CASO LO AGREGAMOS A UNA ETIQUETA
+    // ESTA SE CAMBIA DE COMPORTAMIENTO.
+    function miFuncion(event){
+      event.preventDefault();
+      document.getElementById("myForm").submit();
+    }
+
+  // ejemplo 1
+  //  document.getElementById("enlace").addEventListener("click", function(event){
+  //    event.preventDefault()
+  //  });
+
+  //  document.getElementById("miChk").addEventListener("click",
+  //  function(event){
+  //     event.preventDefault()
+  //  }
+  //  );
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body onclick="capturar(event)">
+    <h1>javascript y eventos</h1>
+    <p>Haga click en cualquier elemento para saber que elemento desencadeno el evento click</p>
+
+    <label>Prueba</label>
+    <button>Boton 1</button>
+    <p id="demo">Etiqueta p con id demo</p>
+
+
+    <script>
+      function capturar(event){
+        var x = event.target;
+        console.log(x);
+        document.getElementById("demo").innerHTML = "Desencadenado por elemento:"+ x.tagName;
+      }
+  
+    </script>
+
+  </body>
+</html>

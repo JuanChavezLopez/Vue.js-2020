@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <componente-1></componente-1>
+        
+
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+
+    Vue.component('componente-1',{
+    template:` <div>
+              <v-btn color = "success">{{ texto1 }}</v-btn>
+              <componente-2 texto2="Texto del componente 2"></componente-2>
+              </div>`
+              ,
+    data(){
+      return{
+        texto1:'Texto componente 1'
+      }
+    }
+    })
+
+    Vue.component('componente-2',{
+    template:`<v-chip color = "primary">{{  texto2 }}</v-chip>`,
+    props:['texto2']
+    })
+
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+</html>

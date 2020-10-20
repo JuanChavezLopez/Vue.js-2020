@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+
+    <div id="app-8">
+      <h1>{{ texto }}</h1>
+      <h2>{{ texto }}</h2>
+      <h3>{{ texto }}</h3>
+      <h4>{{ texto }}</h4>
+      <h5>{{ texto }}</h5>
+      <!-- <input v-model="texto" v-on:click="ingresarTexto"> -->
+      <!-- <input v-model="texto" v-on:change="ingresarTexto"> -->
+      <!-- <input v-model="texto" v-on:keyup="ingresarTexto"> -->
+
+      <input v-model="texto" v-on:click.once="ingresarTexto">
+
+    </div>
+
+    <script>
+      var app8 = new Vue({
+        el:"#app-8",
+        data: function(){
+          return{
+            texto: 'Texto de prueba'
+          }
+        },
+        methods:{
+          ingresarTexto: function(){
+            console.log('El texto es: '+this.texto)
+            alert('El texto es: '+this.texto)
+          }
+        }
+      })
+
+    </script>
+
+  </body>
+</html>
